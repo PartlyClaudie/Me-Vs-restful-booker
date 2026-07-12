@@ -16,4 +16,4 @@ pytest tests/ -v
 \`\`\`
 
 ## Status
-🚧 In progress — building out auth, booking CRUD, and CI pipeline.
+[![API Tests](https://github.com/PartlyClaudie/Me-Vs-restful-booker/actions/workflows/tests.yml/badge.svg)](https://github.com/PartlyClaudie/Me-Vs-restful-booker/actions/workflows/tests.yml)
