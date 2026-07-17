@@ -1,18 +1,17 @@
-import requests
-
-BASE_URL = "https://restful-booker.herokuapp.com"
-
-def test_create_token_with_valid_credentials():
+def test_create_token_with_valid_credentials(base_url):
+    import requests
     response = requests.post(
-        f"{BASE_URL}/auth",
+        f"{base_url}/auth",
         json={"username": "admin", "password": "password123"}
     )
     assert response.status_code == 200
     assert "token" in response.json()
 
-def test_create_token_with_invalid_credentials():
+
+def test_create_token_with_invalid_credentials(base_url):
+    import requests
     response = requests.post(
-        f"{BASE_URL}/auth",
+        f"{base_url}/auth",
         json={"username": "wrong", "password": "wrong"}
     )
     assert response.status_code == 200  # this API returns 200 even on failure — worth noting!
